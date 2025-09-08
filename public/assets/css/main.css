@@ -1,0 +1,9 @@
+/* Common */
+@import 'inc/variables.css';
+@import 'inc/typography.css';
+@import 'inc/common.css';
+@import 'inc/forms.css';
+@import 'inc/tables.css';
+
+/* Pages */
+@import 'pages/index.css';

@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-base);
+    min-width: calc(var(--spacer) * 46); /* 768px - spacer * 2 */
+}
+
+th, td {
+    padding: var(--table-padding);
+    text-align: left;
+    border: var(--border);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}

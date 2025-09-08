@@ -1,0 +1,44 @@
+name: foodsoul
+
+services:
+  db:
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=database
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+    ports:
+      - 3306:3306
+    volumes:
+      - ./docker/data/db:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin
+    environment:
+      - PMA_HOST=db
+      - PMA_USER=root
+      - PMA_PASSWORD=password
+    ports:
+      - 8085:80
+    depends_on:
+      - db
+
+  app:
+    image: webdevops/php-nginx:8.4
+    ports:
+      - 8080:80
+    volumes:
+      - ./public:/app
+      - ./public:/var/www/html
+      - ./app:/var/www/app
+    environment:
+      - WEB_DOCUMENT_ROOT=/var/www/html
+      - DB_DRIVER=mysql
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_DATABASE=database
+      - DB_USER=user
+      - DB_PASSWORD=password
+    depends_on:
+      - db

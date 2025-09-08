@@ -1,0 +1,76 @@
+:root {
+
+
+    /* Colors */
+
+    --color-bg: #fff;
+    --color-text: #333;
+    --color-text-light: #666;
+    --color-primary: #000;
+    --color-secondary: #fff;
+    --color-light: #eee;
+    --color-dark: #666;
+    --color-dark-hover: #888;
+    --color-dark-text: #eee;
+
+    --color-border: #ddd;
+
+    --color-btn-border: none;
+    --color-btn-text: var(--color-dark-text);
+    --color-btn-bg: var(--color-dark);
+    --color-btn-bg-hover: var(--color-dark-hover);
+
+    --color-input-border: var(--color-border);
+    --color-input-text: var(--color-text);
+    --color-input-bg: var(--color-bg);
+    --color-input-invalid: #f00;
+
+
+    /* Components */
+
+    --spacer: 1rem;
+    --container-width: calc(var(--spacer) * 64);       /* 1024px */
+    --container-padding: var(--spacer);
+    --rounded: 0.5rem;
+    --border: 1px solid var(--color-border);
+
+    --btn-border: none;
+    --btn-border-radius: 1rem;
+    --btn-padding: calc(var(--spacer) * 0.5) var(--spacer);
+
+    --input-border: var(--border);
+    --input-border-radius: var(--rounded);
+    --input-padding: calc(var(--spacer) * 0.5);
+
+    --table-padding: calc(var(--spacer) * 0.5);
+
+
+    /* Typography */
+
+    --font-family-base: sans-serif;
+    --font-family-heading: inherit;
+
+    --font-size-base: 1rem;                              /* 16px */
+    --font-size-xs: calc(var(--font-size-base) * 0.75);  /* 12px */
+    --font-size-sm: calc(var(--font-size-base) * 0.875); /* 14px */
+    --font-size-md: calc(var(--font-size-base) * 1.125); /* 18px */
+    --font-size-lg: calc(var(--font-size-base) * 1.5);   /* 24px */
+    --font-size-xl: calc(var(--font-size-base) * 2);     /* 32px */
+
+    --font-size-h1: calc(var(--font-size-base) * 2);     /* 32px */
+    --font-size-h2: calc(var(--font-size-base) * 1.75);  /* 28px */
+    --font-size-h3: calc(var(--font-size-base) * 1.5);   /* 24px */
+    --font-size-h4: calc(var(--font-size-base) * 1.25);  /* 20px */
+    --font-size-h5: calc(var(--font-size-base) * 1.125); /* 18px */
+    --font-size-h6: var(--font-size-base);               /* 16px */
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    --font-weight-heading: var(--font-weight-bold);
+    --font-weight-component: var(--font-weight-medium);
+
+    --line-height-base: 1.5;
+    --line-height-heading: 1.2;
+}
