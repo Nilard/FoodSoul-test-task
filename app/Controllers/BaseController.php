@@ -5,6 +5,19 @@ namespace App\Controllers;
 class BaseController
 {
     /**
+     * The code of response status.
+     */
+    const CODE_OK = 200;
+    const CODE_BAD_REQUEST = 400;
+    const CODE_UNAUTHORIZED = 401;
+    const CODE_FORBIDDEN = 403;
+    const CODE_NOT_FOUND = 404;
+    const CODE_INTERNAL_SERVER_ERROR = 500;
+    const CODE_BAD_GATEWAY = 502;
+    const CODE_SERVICE_UNAVAILABLE = 503;
+    const CODE_GATEWAY_TIMEOUT = 504;
+
+    /**
      * Render a view.
      *
      * @param string $view
@@ -46,8 +59,9 @@ class BaseController
      *
      * @return void
      */
-    protected function json(array $data): void
+    protected function json(array $data, int $status = self::CODE_OK): void
     {
+        http_response_code($status);
         header('Content-Type: application/json');
         echo json_encode($data);
     }
