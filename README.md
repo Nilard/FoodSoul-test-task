@@ -1,5 +1,29 @@
 # Nikolay Ladygin / FoodSoul-test-task
 
+## Task
+
+Original task (in Russian): https://docs.google.com/document/d/11xyT6yRENQgaXN9Dm6pVrZ7NWVE3jaXJk8ZnpVOuuv8/edit?tab=t.0
+
+### Translation
+
+**Task:** URL Shortening Project Development
+
+**Requirements:**
+
+* Ability to shorten URLs via a web form
+* Ability to shorten URLs via an API (JSON)
+* Use MariaDB as the database
+* Frameworks are not allowed
+* Composer is not allowed
+* Must follow OOP MVC principles
+
+**For additional complexity:**
+
+* Add user authentication and registration with email confirmation
+
+
+## Setup Instructions
+
 1. Deploy the project using Docker:
 
    ```
